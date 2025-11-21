@@ -1,0 +1,40 @@
+<div class="confirmar-container">
+  <h2 class="section-cards-header">Confirmar Compra</h2>
+  
+  <div class="resumen-pedido">
+    <h3>Resumen del Pedido</h3>
+    <div id="resumen-items"></div>
+    <div id="total-final" style="font-size: 1.5rem; font-weight: bold; margin: 20px 0;"></div>
+  </div>
+  
+  <div class="form-alta">
+    <form class="formulario-alta-producto form-confirmacion">
+      <div class="campo-formulario">
+        <label class="etiqueta">Nombre completo:</label>
+        <input type="text" name="nombre" class="control-formulario" required>
+      </div>
+
+      <div class="campo-formulario">
+        <label class="etiqueta">Dirección:</label>
+        <input type="text" name="direccion" class="control-formulario" required>
+      </div>
+
+      <div class="campo-formulario">
+        <label class="etiqueta">Teléfono:</label>
+        <input type="tel" name="telefono" class="control-formulario" required>
+      </div>
+
+      <div class="campo-formulario">
+        <label class="etiqueta">Método de pago:</label>
+        <select name="pago" class="control-formulario" required>
+          <option value="">Seleccionar</option>
+          <option value="tarjeta">Tarjeta de crédito/débito</option>
+          <option value="efectivo">Efectivo</option>
+          <option value="transferencia">Transferencia bancaria</option>
+        </select>
+      </div>
+
+      <button type="submit" class="boton-enviar">Confirmar Pedido</button>
+    </form>
+  </div>
+</div>
