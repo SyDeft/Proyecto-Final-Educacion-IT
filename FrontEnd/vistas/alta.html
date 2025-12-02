@@ -1,0 +1,103 @@
+<div class="alta-container">
+  <h2 class="section-cards-header">Alta de Productos</h2>
+  
+  <div class="form-alta">
+    <form class="formulario-alta-producto">
+      <div class="campo-formulario">
+        <label class="etiqueta">Nombre:*</label>
+        <input type="text" name="nombre" class="control-formulario" required minlength="2">
+      </div>
+      
+      <div class="campo-formulario">
+        <label class="etiqueta">Precio:*</label>
+        <input type="number" name="precio" step="0.01" min="0.01" class="control-formulario" required>
+      </div>
+      
+      <div class="campo-formulario">
+        <label class="etiqueta">Stock:*</label>
+        <input type="number" name="stock" min="0" class="control-formulario" required>
+      </div>
+      
+      <div class="campo-formulario">
+        <label class="etiqueta">Marca:*</label>
+        <input type="text" name="marca" class="control-formulario" required>
+      </div>
+      
+      <div class="campo-formulario">
+        <label class="etiqueta">Categoría:*</label>
+        <select name="categoria" class="control-formulario" required>
+          <option value="">Seleccionar categoría</option>
+          <option value="Alimento">Alimento</option>
+          <option value="Juguetes">Juguetes</option>
+          <option value="Accesorios">Accesorios</option>
+          <option value="Salud">Salud</option>
+          <option value="Higiene">Higiene</option>
+        </select>
+      </div>
+      
+      <div class="campo-formulario">
+        <label class="etiqueta">Descripción corta:*</label>
+        <textarea name="descripcion" class="control-formulario" required maxlength="100"></textarea>
+      </div>
+      
+      <div class="campo-formulario">
+        <label class="etiqueta">Descripción larga:</label>
+        <textarea name="descripcionLarga" class="control-formulario" rows="4"></textarea>
+      </div>
+      
+      <div class="campo-formulario">
+        <label class="etiqueta">Envío sin cargo:</label>
+        <div class="opciones-envio">
+          <label>
+            <input type="radio" name="envioGratis" value="si" checked> Sí
+          </label>
+          <label>
+            <input type="radio" name="envioGratis" value="no"> No
+          </label>
+        </div>
+      </div>
+      
+      <div class="campo-formulario" style="display: flex; gap: 20px;">
+        <div style="flex: 1;">
+          <label class="etiqueta">Edad desde (meses):</label>
+          <input type="number" name="edadDesde" min="0" class="control-formulario">
+        </div>
+        <div style="flex: 1;">
+          <label class="etiqueta">Edad hasta (meses):</label>
+          <input type="number" name="edadHasta" min="0" class="control-formulario">
+        </div>
+      </div>
+      
+      <div class="campo-formulario">
+        <label class="etiqueta">Foto:*</label>
+        <input type="file" name="foto" class="control-formulario" accept="image/*" required>
+        <small style="color: #666; font-size: 0.8rem;">Formatos aceptados: JPG, PNG, GIF, WEBP (Máx. 2MB)</small>
+        <div id="preview-container" style="margin-top: 10px; display: none;">
+          <img id="image-preview" style="max-width: 200px; max-height: 150px; border-radius: 4px; border: 1px solid #ddd;">
+        </div>
+      </div>
+      
+      <button type="submit" class="boton-enviar">Guardar Producto</button>
+    </form>
+  </div>
+
+  <div class="tabla-productos-section">
+    <h3>Productos Existentes</h3>
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Marca</th>
+          <th>Categoría</th>
+          <th>Descripción</th>
+          <th>Envío</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-productos-body"></tbody>
+    </table>
+  </div>
+</div>
